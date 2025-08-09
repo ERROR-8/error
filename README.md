@@ -1,2 +1,2 @@
 # error
-It is made for practice only.
+The team that finds solutions where others see “not found.”
