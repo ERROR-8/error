@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 20px;
+      width: 350px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      border: 2px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Glowing border */
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -2px; left: -2px; right: -2px; bottom: -2px;
+      background: linear-gradient(45deg, #ff00cc, #3333ff, #00ffcc);
+      z-index: -1;
+      border-radius: 22px;
+      background-size: 300% 300%;
+      animation: borderGlow 6s linear infinite;
+    }
+
+    @keyframes borderGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    /* Typing effect */
+    .typing {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 3px solid #00ffcc;
+      width: 0;
+      animation: typing 9s steps(1000, end) forwards, blink 0.9s infinite;
+      margin: 0 auto 15px auto;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 25px;
+      background: #17a4e5;
+      color: #0f3460;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #69cce4;
+      color: #fff;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Hello, I'm</h1>
+    <div class="typing">Sougata Mandal 👋</div>
+    <p>
+      I'm a BCA student passionate about <b>technology, coding, and innovation</b>.  
+      I love learning new things, solving problems, and building creative projects.
+    </p>
+    <a href="https://x.com/@S_o_u_g_a_t_a_9" class="btn">Connect with Me</a>
+  </div>
+
+</body>
+</html>
