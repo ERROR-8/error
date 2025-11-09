@@ -11,3 +11,4 @@ if (!$mysqli) {
 }
 mysqli_set_charset($mysqli, 'utf8mb4');
 session_start();
+?>
