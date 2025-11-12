@@ -3,7 +3,6 @@ import java.util.*;
 class BookItem {
     String bookName;
     boolean borrowed;
-
     BookItem(String bookName) {
         this.bookName = bookName;
         this.borrowed = false;
@@ -12,7 +11,6 @@ class BookItem {
 
 class Reader {
     String name;
-
     Reader(String name) {
         this.name = name;
     }
@@ -20,7 +18,6 @@ class Reader {
 
 class LibraryCenter {
     ArrayList<BookItem> bookList = new ArrayList<>();
-
     void addBook(String name) {
         bookList.add(new BookItem(name));
     }
@@ -61,15 +58,12 @@ public class MiniLibrary {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         LibraryCenter lib = new LibraryCenter();
-
         lib.addBook("Java Made Easy");
         lib.addBook("C Programming");
         lib.addBook("Computer Networks");
-
         System.out.print("Enter your name: ");
         String userName = sc.nextLine();
         Reader r = new Reader(userName);
-
         int option;
         do {
             System.out.println("\n==== Library Menu ====");
@@ -80,7 +74,6 @@ public class MiniLibrary {
             System.out.print("Enter your choice: ");
             option = sc.nextInt();
             sc.nextLine();
-
             switch (option) {
                 case 1:
                     lib.viewBooks();
@@ -102,7 +95,6 @@ public class MiniLibrary {
                     System.out.println("Invalid option!");
             }
         } while (option != 4);
-
         sc.close();
     }
 }
